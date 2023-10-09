@@ -1,0 +1,6 @@
+name: GitHub Action exercice
+on:
+  push
+jobs:
+  runs-on: ubuntu-latest
+  run: echo "Il sagit de mon premier job github"

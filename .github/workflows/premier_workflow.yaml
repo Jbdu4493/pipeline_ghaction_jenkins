@@ -2,5 +2,9 @@ name: GitHub Action exercice
 on:
   push
 jobs:
-  runs-on: ubuntu-latest
-  run: echo "Il sagit de mon premier job github"
+  runs-on: 
+    os:
+      ubuntu-latest
+  steps:
+    - name : premier step
+      run: echo "Il sagit de mon premier job github"

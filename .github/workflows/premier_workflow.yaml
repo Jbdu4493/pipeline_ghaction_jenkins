@@ -1,10 +1,11 @@
-name: GitHub Action exercice
-on:
-  push
+name: Premier pipeline avec git hub action
+on: push
 jobs:
-  runs-on: 
-    os:
-      ubuntu-latest
-  steps:
-    - name : premier step
-      run: echo "Il sagit de mon premier job github"
+  run-shell-command:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04]
+    steps:
+      - name: echo a string
+        run: echo "Hello world"
